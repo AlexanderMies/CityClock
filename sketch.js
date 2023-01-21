@@ -3,6 +3,11 @@ function setup() {
     createCanvas(800,600); // make an HTML canvas element width x height pixels
 }
 
+
+//references
+// https://columbiaviz.github.io/files/examples/bar_clock/      For the filling time bars/logic thing
+// https://editor.p5js.org/Zach.Lo/sketches/r7vochFzl           As a reference for background, I kept the stars because they were neat :)
+
 //constants
 var starX = -20
 var starY = 500
@@ -143,6 +148,14 @@ function draw() {
   fill(120,0,0)
   ellipse(124,80,10,15)
   ellipse(630,175,10,15)
+
+  //send time to console
+  // used https://stackoverflow.com/questions/16332319/using-setinterval-to-display-time
+  setInterval(function() {
+    var currentDate = new Date()
+    var currentMinute = currentDate.getMinutes()
+    console.log(currentMinute)
+  }, 60000);
   
 
   
